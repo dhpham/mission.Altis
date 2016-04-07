@@ -1,0 +1,34 @@
+#include "JEPP_defines.hpp"
+#include "JEPP_artillery\JEPP_artillery_dialogs.hpp"
+#include "JEPP_cas\JEPP_cas_dialogs.hpp"
+#include "JEPP_helicopter\JEPP_helicopter_dialogs.hpp"
+
+class CfgCommunicationMenu
+{
+    #include "JEPP_cfg\JEPP_cfgCommMenu_artillery.hpp"
+    #include "JEPP_cfg\JEPP_cfgCommMenu_cas.hpp"
+    #include "JEPP_cfg\JEPP_cfgCommMenu_helicopter.hpp"
+};
+
+class CfgRadio
+{
+	sounds[] = {};
+    #include "JEPP_cfg\JEPP_cfgRadio.hpp"
+    #include "JEPP_cfg\JEPP_cfgRadio_cas.hpp"
+    #include "JEPP_cfg\JEPP_cfgRadio_letters.hpp"
+    #include "JEPP_cfg\JEPP_cfgRadio_numbers.hpp"
+};
+
+class CfgFunctions
+{
+    #include "JEPP_cfg\JEPP_cfgFunctions.hpp"
+};
+
+class CfgIdentities
+{
+    #include "JEPP_cfg\JEPP_cfgIdentities.hpp"
+    #include "JEPP_cfg\JEPP_cfgIdentities_AAF.hpp"
+    #include "JEPP_cfg\JEPP_cfgIdentities_CSAT.hpp"
+    #include "JEPP_cfg\JEPP_cfgIdentities_NATO.hpp"
+    #include "JEPP_cfg\JEPP_cfgIdentities_other.hpp"
+};

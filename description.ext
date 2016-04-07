@@ -1,0 +1,10 @@
+author = "Jepp";
+onLoadName = "mission";
+onLoadMission = "mission desc";
+
+overviewText = "overviewText";
+overviewTextLocked = "overview text locked";
+
+allowFunctionsRecompile = 1;
+
+#include "JEPP_scripts\JEPP_description.ext"

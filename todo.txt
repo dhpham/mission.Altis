@@ -1,0 +1,34 @@
+type 3 engagement
+finish gbu weapon profile (release distance/ccrp) (check if gbu will even target laser)
+
+agm vs buildings
+use laser object when mark type is laser (agm65 can't lock on to laser!)
+
+
+time on station
+bingo fuel
+
+multiple ship
+
+
+strafe with gun (remove offset)
+
+add cas planes during mission
+
+
+
+plane requires LOS before tally
+
+
+lgb using setvelocitytransformation
+
+
+
+
+target list for target update
+
+
+ip stuff
+
+
+*** prevent multiple dialogs
