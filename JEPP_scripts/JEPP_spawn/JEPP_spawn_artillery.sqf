@@ -1,5 +1,5 @@
-_minDist = 15;
-_maxDist = 150;
+_minDist = 55;
+_maxDist = 100;
 _objDist = 10;
 _maxGradient = 0.5;
 _gradRad = 1;

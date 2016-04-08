@@ -82,9 +82,9 @@ if (_pos distance2D _markPos > _smokeDist) then {
 
 // find a suitable LZ near the smoke pos
 _minDist = 0;
-_maxDist = 70;
-_objDist = 15;
-_maxGradient = 0.2;
+_maxDist = 50;
+_objDist = 10;
+_maxGradient = 0.3;
 _gradientRadius = 5;
 _waterMode = 0;
 _shoreMode = false;

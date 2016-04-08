@@ -24,9 +24,9 @@ if (_heli getVariable ["JEPP_helicopter_doors", true]) then {
 
 // find LZ
 _minDist = 0;
-_maxDist = 70;
-_objDist = 15;
-_maxGradient = 0.2;
+_maxDist = 50;
+_objDist = 10;
+_maxGradient = 0.3;
 _gradientRadius = 5;
 _waterMode = 0;
 _shoreMode = false;
@@ -58,7 +58,8 @@ if (_heli getVariable ["JEPP_helicopter_doors", true]) then {
 };
 
 // get out
-waitUntil {isTouchingGround _heli};
+//waitUntil {isTouchingGround _heli};
+waitUntil {getPosATL _heli select 2 < 1};
 _crew = crew _heli;
 _cargo = fullCrew [_heli, "cargo"];
 _turret = [fullCrew [_heli, "turret"], [], {_x select 4}] call JEPP_fnc_filter;
