@@ -60,12 +60,12 @@ if (_heli getVariable ["JEPP_helicopter_doors", true]) then {
 // get out
 //waitUntil {isTouchingGround _heli};
 waitUntil {getPosATL _heli select 2 < 1};
-_crew = crew _heli;
+//_crew = crew _heli;
 _cargo = fullCrew [_heli, "cargo"];
-_turret = [fullCrew [_heli, "turret"], [], {_x select 4}] call JEPP_fnc_filter;
-_cargo = [_cargo + _turret, [], {_x select 0}] call JEPP_fnc_apply;
-doGetOut _cargo;
+_personTurrets = [fullCrew [_heli, "turret"], [], {_x select 4}] call JEPP_fnc_filter;
+_passengers = [_cargo + _personTurrets, [], {_x select 0}] call JEPP_fnc_apply;
+doGetOut _passengers;
 
-waitUntil {crew _heli isEqualTo _crew};
+//waitUntil {crew _heli isEqualTo _crew};
 sleep 3;
 [_heli] execVM "JEPP_scripts\JEPP_helicopter\JEPP_helicopter_RTB.sqf";

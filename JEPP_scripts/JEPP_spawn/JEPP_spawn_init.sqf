@@ -1,14 +1,15 @@
 _worldCenter = [worldSize/2, worldSize/2];
 _minDist = 0;
 _maxDist = worldSize/2;
-_objDist = 100;
-_maxGradient = 1;
+_objDist = 10;
+_maxGradient = 0.5;
 _gradRad = 10;
 _waterMode = 0;
 _shoreMode = false;
-_posBlacklist = []; 
-//_pos = [_worldCenter, _minDist, _maxDist, _objDist, _maxGradient, _gradRad, _waterMode, _shoreMode, _posBlacklist] call JEPP_fnc_findFlatEmpty;
-//player setPos _pos;
+_posBlacklist = [];
+_objBlacklist = [];
+_pos = [_worldCenter, _minDist, _maxDist, _objDist, _maxGradient, _gradRad, _waterMode, _shoreMode, _posBlacklist, _objBlacklist] call JEPP_fnc_findFlatEmpty;
+player setPos _pos;
 
 
 _squad = execVM "JEPP_scripts\JEPP_spawn\JEPP_spawn_squad.sqf";

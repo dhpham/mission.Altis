@@ -1,6 +1,6 @@
 _config = configfile >> "CfgGroups" >> "Empty" >> "Guerrilla" >> "Camps";
 _camps = "true" configClasses _config;
-_side = OPFOR;
+_side = INDEPENDENT;
 
 _worldCenter = [worldSize/2, worldSize/2];
 _minDist = 0;
@@ -11,13 +11,14 @@ _gradRad = 10;
 _waterMode = 0;
 _shoreMode = false;
 _posBlacklist = [];
+_objBlacklist = [];
 
-_r1 = 1500;
+_r1 = 2000;
 JEPP_spawn_centers = [];
 {
     _camp = _x;
     _name = getText (_camp >> "name");
-    _pos = [_worldCenter, _minDist, _maxDist, _objDist, _maxGradient, _gradRad, _waterMode, _shoreMode, _posBlacklist] call JEPP_fnc_findFlatEmpty;
+    _pos = [_worldCenter, _minDist, _maxDist, _objDist, _maxGradient, _gradRad, _waterMode, _shoreMode, _posBlacklist, _objBlacklist] call JEPP_fnc_findFlatEmpty;
     if !(_pos isEqualTo []) then {
         [_pos, _side, _camp] call BIS_fnc_spawnGroup;
         _center = "Sign_Sphere200cm_F" createVehicle _pos;

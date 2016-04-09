@@ -1,13 +1,16 @@
 _rad = 25;
 
-_configs = 'getText (_x >> "name") == getText (_x >> "nameSound")' configClasses (configfile >> "CfgIdentities");
+_configs = 'getText (_x >> "nameSound") != "" && getText (_x >> "name") == getText (_x >> "nameSound")' configClasses (configfile >> "CfgIdentities");
 _configs = _configs call BIS_fnc_arrayShuffle;
 _names = [_configs, [], {getText (_x >> "name")}, false] call JEPP_fnc_apply;
+_names = [];
 _identities = [];
 {
-    _name = _names call BIS_fnc_arrayPop;
+    _config = _x;
+    _name = getText (_config >> "name");
     if !(_name in _names) then {
-        _identities pushBack configName _x;
+        _names pushBack _name;
+        _identities pushBack configName _config;
     };
 } forEach _configs;
 
