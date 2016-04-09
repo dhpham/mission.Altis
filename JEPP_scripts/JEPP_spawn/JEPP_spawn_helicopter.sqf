@@ -8,7 +8,7 @@ _shoreMode = false;
 _posBlacklist = [];
 
 _helicopter1 = "RHS_UH1Y_UNARMED";
-_helicopter2 = "RHS_UH60M_d";
+_helicopter2 = "RHS_UH1Y_UNARMED";
 
 // helicopter
 _pos = [getPos player, _minDist, _maxDist, _objDist, _maxGradient, _gradRad, _waterMode, _shoreMode, _posBlacklist] call JEPP_fnc_findFlatEmpty;
